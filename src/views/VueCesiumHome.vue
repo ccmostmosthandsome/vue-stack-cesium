@@ -6,7 +6,7 @@
 
 <script>
 // @ is an alias to /src
-import HelloCesium from "@/components/HelloCesium.vue";
+import HelloCesium from "@/components/HelloVueCesium.vue";
 import { mapState, mapActions, mapMutations, mapGetters } from "vuex";
 
 export default {
@@ -26,11 +26,7 @@ export default {
     ...mapActions([]),
     ...mapMutations([])
   },
-  created() {
-    this.$store.dispatch("aCsInit").then(() => {
-      //this.$store.dispatch("aLoad1stDataSet");
-    });
-  },
+  created() { },
   mounted: function () { }
 };
 </script>

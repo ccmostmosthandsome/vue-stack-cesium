@@ -24,9 +24,9 @@ const routes = [
     component: () => import(/* webpackChunkName: "vuetifyHome" */ '../views/VuetifyHome.vue')
   },
   {
-    path: '/cesium',
-    name: 'cesiumHome',
-    component: () => import(/* webpackChunkName: "cesiumHome" */ '../views/CesiumHome.vue')
+    path: '/vuecesium',
+    name: 'vueCesiumHome',
+    component: () => import(/* webpackChunkName: "cesiumHome" */ '../views/VueCesiumHome.vue')
   },
 ]
 

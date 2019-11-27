@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-import Cesium from '../plugins/cesium'
+//import Cesium from '../plugins/cesium'
 
 Vue.use(Vuex)
 
@@ -18,7 +18,8 @@ export default new Vuex.Store({
     },
     dataSets: [],
     name1: "Vue-Stack-Cesium Demo",
-    count: 0
+    count: 0,
+    vcPosition: { lng: 0, lat: 0, height: 100000 },
 
   },
 
@@ -29,7 +30,7 @@ export default new Vuex.Store({
         fullscreenButton: false,
         // additional viewer settings
       };
-      csViewer = new Cesium.Viewer('cesiumContainer', viewerData);
+      //csViewer = new Cesium.Viewer('cesiumContainer', viewerData);
       console.log("mCsInit")
     },
 
@@ -39,7 +40,10 @@ export default new Vuex.Store({
     },
 
     increment(state) {
-      state.count++
+      state.count++;
+      state.vcPosition.lng = (Math.random() - 0.5) * 180;
+      state.vcPosition.lat = (Math.random() - 0.5) * 90;
+      state.vcPosition.height = Math.random() * 500000;
     }
   },
 
